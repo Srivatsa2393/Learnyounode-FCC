@@ -22,6 +22,8 @@ const extension = `.${process.argv[3]}`;
 
 fs.readdir(directory, (err, list) => {
   list.forEach(file => {
-    console.log(file);
+    if(path.extname(file) === extension){
+      console.log(file);
+    }
   })
 })
